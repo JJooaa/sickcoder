@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Post {
-  id Int @id @default(autoincrement())
-  title String @db.VarChar(255)
+  id        Int      @id @default(autoincrement())
+  title     String   @db.VarChar(255)
   createdAt DateTime @default(now()) @db.Timestamp(6)
-  content String?
+  content   String?
 }
