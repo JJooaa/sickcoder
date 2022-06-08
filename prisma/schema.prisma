@@ -11,13 +11,13 @@ datasource db {
 }
 
 model Item {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   quantity  Int
   price     Int
   total     Int
-  Invoice   Invoice? @relation(fields: [invoiceId], references: [id])
-  invoiceId String?  @db.ObjectId
+  Invoice   Invoice @relation(fields: [invoiceId], references: [id])
+  invoiceId String  @db.ObjectId
 }
 
 model Invoice {
