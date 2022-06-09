@@ -28,7 +28,7 @@ model Invoice {
   clientName    String
   clientEmail   String
   status        String
-  senderAdress  Address
+  senderAddress Address
   clientAddress Address
   items         Item[]
 }
