@@ -31,6 +31,7 @@ model Invoice {
   senderAddress Address
   clientAddress Address
   items         Item[]
+  total         Int
 }
 
 type Address {
