@@ -17,10 +17,7 @@ export default async function handler(
     status,
     senderAddress,
     clientAddress,
-    name,
-    quantity,
-    price,
-    total,
+    items,
   } = req.body;
 
   try {
@@ -34,17 +31,12 @@ export default async function handler(
         senderAddress,
         clientAddress,
         items: {
-          create: {
-            name,
-            quantity,
-            price,
-            total,
-          },
+          create: [...items],
         },
       },
     });
     res.status(200).send({ message: "successfully added a new invoice" });
   } catch (error) {
-    res.status(500).send({ message: "error" });
+    res.status(500).send({ message: "error!" });
   }
 }
