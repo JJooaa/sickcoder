@@ -20,6 +20,13 @@ export default async function handler(
     items,
   } = req.body;
 
+  let totalValue = 0;
+  if (items) {
+    for (let i = 0; i < items.length; i++) {
+      totalValue += items[i].total;
+    }
+  }
+
   try {
     await prisma.invoice.create({
       data: {
@@ -33,10 +40,11 @@ export default async function handler(
         items: {
           create: [...items],
         },
+        total: totalValue,
       },
     });
     res.status(200).send({ message: "successfully added a new invoice" });
   } catch (error) {
-    res.status(500).send({ message: "error!" });
+    res.status(500).send({ message: "error" });
   }
 }
