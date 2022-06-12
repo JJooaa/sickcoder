@@ -26,6 +26,19 @@ interface Props {
 }
 
 const Invoice: React.FC<Props> = ({ selectedInvoice }) => {
+  const {
+    id,
+    clientAddress,
+    clientEmail,
+    clientName,
+    createdAt,
+    description,
+    paymentTerms,
+    senderAddress,
+    status,
+    total,
+  } = selectedInvoice;
+
   const router = useRouter();
 
   const deletePost = async (id: string) => {
@@ -40,9 +53,9 @@ const Invoice: React.FC<Props> = ({ selectedInvoice }) => {
       <button className="font-bold" onClick={() => router.push("/")}>
         Go Back
       </button>
-      <div>Status {selectedInvoice.status}</div>
-      <p>{selectedInvoice.id}</p>
-      <button onClick={() => deletePost(selectedInvoice.id)}>Delete</button>
+      <div>Status {status}</div>
+      <p>{id}</p>
+      <button onClick={() => deletePost(id)}>Delete</button>
     </div>
   );
 };
