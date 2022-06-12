@@ -1,11 +1,7 @@
 import Header from "./Header";
 import React from "react";
 
-interface Props {
-  children: JSX.Element;
-}
-
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <div className="flex flex-col">
       <Header />

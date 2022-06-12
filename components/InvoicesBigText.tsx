@@ -1,8 +1,4 @@
-interface Props {
-  invoiceLength: number;
-}
-
-const InvoicesBigText = ({ invoiceLength }: Props) => {
+const InvoicesBigText = ({ invoiceLength }: { invoiceLength: number }) => {
   return (
     <div className="flex flex-col">
       <h1 className="text-xl font-bold">Invoices</h1>

@@ -1,13 +1,8 @@
 import { Field, ErrorMessage } from "formik";
 
-interface Props {
-  label: string;
-  value: string;
-}
-
-const FormField = ({ label, value }: Props) => {
+const FormField = ({ label, value }: { label: string; value: string }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col my-3">
       <div className="flex justify-between">
         <label htmlFor={value} className="text-[#7E88C3]">
           {label}

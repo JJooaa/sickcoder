@@ -1,11 +1,7 @@
 import { Invoice } from "@prisma/client";
 import { useRouter } from "next/router";
 
-interface Props {
-  invoice: Invoice;
-}
-
-const InvoiceCard = ({ invoice }: Props) => {
+const InvoiceCard = ({ invoice }: { invoice: Invoice }) => {
   const { id, createdAt, total, status, clientName } = invoice;
 
   const router = useRouter();
