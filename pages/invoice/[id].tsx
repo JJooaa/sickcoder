@@ -3,6 +3,7 @@ import React from "react";
 import prisma from "../../lib/prisma";
 import { Invoice } from "@prisma/client";
 import { useRouter } from "next/router";
+import GoBack from "../../components/GoBack";
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const selectedInvoice = await prisma.invoice.findUnique({
@@ -50,9 +51,7 @@ const Invoice: React.FC<Props> = ({ selectedInvoice }) => {
 
   return (
     <div className="px-6 py-8">
-      <button className="font-bold" onClick={() => router.push("/")}>
-        Go Back
-      </button>
+      <GoBack />
       <div>Status {status}</div>
       <p>{id}</p>
       <button onClick={() => deletePost(id)}>Delete</button>
