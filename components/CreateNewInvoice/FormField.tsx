@@ -7,8 +7,9 @@ const FormField = ({
 }: {
   label: string;
   value: string;
-  type?: string;
+  type?: string; // type is optional since the default values is string, we want type prop for the type "number"
 }) => {
+
   return (
     <div className="flex flex-col my-3">
       <div className="flex justify-between">
