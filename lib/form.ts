@@ -1,5 +1,4 @@
 export const initialValues = {
-  createdAt: "",
   senderAddress: {
     street: "",
     city: "",
@@ -17,4 +16,5 @@ export const initialValues = {
   clientName: "",
   clientEmail: "",
   status: "",
+  items: [{ name: "", quantity: 0, price: 0, total: 0 }],
 };

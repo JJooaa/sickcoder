@@ -1,5 +1,4 @@
 export interface FormValues {
-  createdAt: string;
   senderAddress: {
     street: string;
     city: string;
@@ -17,4 +16,10 @@ export interface FormValues {
   clientName: string;
   clientEmail: string;
   status: string;
+  items: {
+    name: string;
+    quantity: number;
+    price: number;
+    total: number;
+  }[];
 }
