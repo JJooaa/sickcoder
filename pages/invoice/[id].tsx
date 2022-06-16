@@ -52,8 +52,8 @@ const Invoice: React.FC<Props> = ({ selectedInvoice }) => {
   return (
     <div className="px-6 py-8">
       <GoBack />
-      <div>Status {status}</div>
-      <p>{id}</p>
+      <div className="bg-white h-20">Status {status}</div>
+      <div></div>
       <button onClick={() => deletePost(id)}>Delete</button>
     </div>
   );

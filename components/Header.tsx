@@ -14,7 +14,7 @@ const Header = () => {
           alt="blue pacman looking thing"
         />
       </div>
-      <div className="flex h-full pr-6 gap-8 items-center ">
+      <div className="flex h-full gap-8 items-center ">
         <Image src={Moon} alt="a grey moon" />
         <div className="w-[1px] h-full bg-[#494E6E]"></div>
         <Image

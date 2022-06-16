@@ -42,7 +42,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     });
     res.status(200).send({ message: "successfully added a new invoice" });
   } catch (error) {
-    res.status(500).send({ message: "error" });
+    res.status(500).send({ message: req.body });
   }
 };
 

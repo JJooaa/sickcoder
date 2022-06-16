@@ -89,7 +89,7 @@ const InvoiceForm = () => {
                   />
                   <FormField
                     label="Total"
-                    value={`items[${index}].price`}
+                    value={`items[${index}].total`}
                     type="number"
                   />
                 </div>
