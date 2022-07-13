@@ -1,5 +1,6 @@
 import { Invoice } from "@prisma/client";
 import { useRouter } from "next/router";
+import Status from "./Status";
 
 const InvoiceCard = ({ invoice }: { invoice: Invoice }) => {
   const { id, createdAt, total, status, clientName } = invoice;
@@ -18,9 +19,7 @@ const InvoiceCard = ({ invoice }: { invoice: Invoice }) => {
       <code>#{id.slice(0, 8)}</code>
       <p>{clientName}</p>
       <time>{createdAt.toString().slice(0, 10)}</time>
-      <div className="capitalize px-4 flex items-center h-10 rounded-md bg-green-400">
-        {status}
-      </div>
+      <Status status={status} />
       <p className="font-bold text-base">£ {total}</p>
     </div>
   );
