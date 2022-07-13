@@ -32,7 +32,7 @@ const Home: React.FC<Props> = ({ invoices }) => {
         <NewInvoiceButton />
       </section>
       <InvoiceList invoices={invoices} />
-      <NothingHere />
+      {invoices.length === 0 && <NothingHere />}
     </div>
   );
 };
