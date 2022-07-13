@@ -4,6 +4,7 @@ import InvoicesBigText from "../components/InvoicesBigText";
 import FilterDropdown from "../components/FilterDropdown";
 import NewInvoiceButton from "../components/NewInvoiceButton";
 import InvoiceList from "../components/InvoiceList";
+import NothingHere from "../components/NothingHere";
 
 export const getStaticProps = async () => {
   const invoices = await prisma.invoice.findMany({
@@ -31,6 +32,7 @@ const Home: React.FC<Props> = ({ invoices }) => {
         <NewInvoiceButton />
       </section>
       <InvoiceList invoices={invoices} />
+      <NothingHere />
     </div>
   );
 };
