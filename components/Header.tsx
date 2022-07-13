@@ -6,7 +6,7 @@ import Sun from "../public/assets/icon-sun.svg";
 
 const Header = () => {
   return (
-    <header className="w-screen h-20 flex bg-[#373B53] justify-between items-center">
+    <header className="w-full h-20 flex bg-[#373B53] justify-between items-center">
       <div className="bg-[#7C5DFA] h-full flex items-center justify-center w-20 rounded-r-3xl">
         <Image
           src={Logo}
