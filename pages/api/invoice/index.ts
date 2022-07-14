@@ -11,7 +11,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     paymentTerms,
     clientName,
     clientEmail,
-    status,
     senderAddress,
     clientAddress,
     items,
@@ -31,7 +30,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         paymentTerms,
         clientName,
         clientEmail,
-        status,
+        status: "pending",
         senderAddress,
         clientAddress,
         items: {

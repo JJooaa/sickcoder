@@ -122,16 +122,16 @@ const Invoice: React.FC<Props> = ({ selectedInvoice }) => {
         </div>
       </div>
       <footer className="bg-white flex justify-evenly items-center h-24 shadow-2xl shadow-black px-5 text-xs">
-        <button className="p-4 font-bold bg-[#F9FAFE] text-[#7E88C3] rounded-3xl">
+        <button className="py-4 px-6 font-bold bg-[#F9FAFE] text-[#7E88C3] rounded-3xl">
           Edit
         </button>
         <button
-          className="p-4 font-bold bg-[#EC5757] text-white rounded-3xl"
+          className="py-4 px-6 font-bold bg-[#EC5757] text-white rounded-3xl"
           onClick={() => setIsModalOpen(true)}
         >
           Delete
         </button>
-        <button className="p-4 font-bold bg-[#7C5DFA] text-white rounded-3xl">
+        <button className="py-4 px-6 font-bold bg-[#7C5DFA] text-white rounded-3xl">
           Mark as Paid
         </button>
       </footer>
