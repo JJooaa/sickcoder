@@ -27,8 +27,6 @@ const InvoiceForm = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(values),
           });
-          console.log(values);
-
           setSubmitting(false);
         }}
       >
@@ -96,7 +94,6 @@ const InvoiceForm = () => {
               </div>
             ))}
 
-            {/* "footer" for buttons */}
             <br />
             <button
               onClick={() => setNumberOfItems((prev) => (prev += 1))}
@@ -108,6 +105,7 @@ const InvoiceForm = () => {
             <br />
           </div>
 
+          {/* "footer" for buttons */}
           <footer className="flex shadow-2xl shadow-black justify-evenly h-24 items-center">
             <button
               type="button"
