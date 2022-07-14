@@ -27,13 +27,13 @@ const DeleteModal = ({
         <div className="flex justify-end gap-2">
           <button
             onClick={() => setIsModalOpen(false)}
-            className="py-4 px-5 font-bold bg-[#F9FAFE] text-[#7E88C3] rounded-3xl text-xs"
+            className="py-4 px-6 font-bold bg-[#F9FAFE] text-[#7E88C3] rounded-3xl text-xs"
           >
             Cancel
           </button>
           <button
             onClick={() => deletePost(id)}
-            className="py-4 px-5 font-bold bg-[#EC5757] text-white rounded-3xl text-xs"
+            className="py-4 px-6 font-bold bg-[#EC5757] text-white rounded-3xl text-xs"
           >
             Delete
           </button>
